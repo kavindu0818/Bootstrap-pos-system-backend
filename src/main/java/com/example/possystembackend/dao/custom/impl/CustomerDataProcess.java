@@ -27,7 +27,7 @@ public class CustomerDataProcess implements CustomerData {
             preparedStatement.setString(1, entity.getId());
             preparedStatement.setString(2, entity.getName());
             preparedStatement.setString(3, entity.getAddress());
-            preparedStatement.setString(4, String.valueOf(entity.getSalary()));
+            preparedStatement.setDouble(4, Double.parseDouble(String.valueOf(entity.getSalary())));
 
             if (preparedStatement.executeUpdate() != 0) {
                 return true;
